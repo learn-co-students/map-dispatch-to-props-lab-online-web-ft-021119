@@ -24,7 +24,7 @@ export class RestaurantInput extends Component {
   }
 
   handleOnSubmit = () => {
-    this.props.addRestaurant
+    this.props.addRestaurant(this.state)
 
     // add missing code
   }
@@ -61,4 +61,4 @@ export class RestaurantInput extends Component {
 // }
 
 //connect this component by wrapping RestaurantInput below
-export default connect(addRestaurant)(RestaurantInput)
+export default connect(null,{addRestaurant})(RestaurantInput)
